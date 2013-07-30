@@ -13,6 +13,10 @@ public class SingleLinkedList {
 		return lists;
 	}
 
+	public Node getNodeByIndex(int index) {
+		return lists.get(0);
+	}
+
 	public int size() {
 
 		return lists.size();
@@ -20,6 +24,10 @@ public class SingleLinkedList {
 
 	public void insertAfter(Node node, int n) {
 		lists.add(n, node);
+	}
+
+	public void deleteWithPositionN(int n) {
+		lists.remove(n);
 	}
 
 }
