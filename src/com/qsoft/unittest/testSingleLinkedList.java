@@ -43,7 +43,24 @@ public class testSingleLinkedList extends TestCase {
 		assertEquals(nodes.size(), singleLinkedList.size());
 	}
 
-	
+	// 5
+	public void testdeleteWithPositionN() {
+		List<Node> nodes = initNotes();
+		int n = 2;
+		SingleLinkedList singleLinkedList = new SingleLinkedList(nodes);
+		singleLinkedList.deleteWithPositionN(n);
+		assertEquals(nodes.size(), singleLinkedList.size());
+
+	}
+
+	// 6
+	public void testGetNodeByIndex() {
+		List<Node> nodes = initNotes();
+		int index = 0;
+		SingleLinkedList singleLinkedList = new SingleLinkedList(nodes);
+		Node node = singleLinkedList.getNodeByIndex(index);
+		assertEquals(nodes.get(0).getValue(), node.getValue());
+	}
 
 	// 7
 	private List<Node> initNotes() {
